@@ -1,15 +1,15 @@
 class Vocabulist < Formula
   desc "Personalized vocabulary frequency list for learning Japanese"
   homepage "https://github.com/odakaui/vocabulist"
-  version "0.1.6"
+  version "0.1.7"
   license "MIT"
 
   if OS.mac?
     url "https://github.com/odakaui/vocabulist/releases/download/v#{version}/vocabulist-v#{version}-x86_64-apple-darwin.tar.gz"
-    sha256 "0a0d1b97af00621054335629bb868df6b6da7debd0be56f55c81fec21d5d9c8b"
+    sha256 "46affc8f17fc3780f1ede5da2c9561d8996c9d120689c68ef6d05e0ed912f03a"
   elsif OS.linux?
     url "https://github.com/odakaui/vocabulist/releases/download/v#{version}/vocabulist-v#{version}-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "2f4117f15418640ed9093b807470e118d7e50602840e3fec2075fb4dbf47452b"
+    sha256 "5c7ddb6dbcebfcf20e07f5fe132f5204007d2a0ab25bcbfc46c8dc85924c349c"
   end
 
   depends_on "mecab" => :recommended
@@ -17,10 +17,16 @@ class Vocabulist < Formula
 
   def install
     bin.install "vocabulist_rs"
-    share.install "jmdict.db"
+    pkgshare.install "jmdict.db"
     prefix.install "ACKNOWLEDGEMENTS.md"
+  end
 
-    ohai "To finish setting up the package please run `vocabulist_rs config --homebrew`."
+  def caveats
+    <<~EOS
+      If you do not have an existing config file, you will need to create one before you can start using vocabulist_rs.
+      
+      Please run `vocabulist_rs config --homebrew`.
+    EOS
   end
 
   test do
