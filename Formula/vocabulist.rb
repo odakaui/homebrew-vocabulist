@@ -5,7 +5,7 @@ class Vocabulist < Formula
 
   if OS.mac?
     url "https://github.com/odakaui/vocabulist/releases/download/v0.1.8/vocabulist-v0.1.8-x86_64-apple-darwin.tar.gz"
-    sha256 "replace_macos"
+    sha256 "88ba7ccac4995975d6a67f55b189b650657bf736ba0d8202f966df87ee419c3d  vocabulist-v0.1.8-x86_64-apple-darwin.tar.gz"
   elsif OS.linux?
     url "https://github.com/odakaui/vocabulist/releases/download/v0.1.8/vocabulist-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
     sha256 "a375dc4101588027d2d88fce5766170202422cd878b191577e7daba71b714f2f  vocabulist-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
