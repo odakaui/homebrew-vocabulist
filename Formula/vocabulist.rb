@@ -4,11 +4,11 @@ class Vocabulist < Formula
   license "MIT"
 
   if OS.mac?
-    url "https://github.com/odakaui/vocabulist/releases/download/v0.1.109/vocabulist-v0.1.109-x86_64-apple-darwin.tar.gz"
+    url "https://github.com/odakaui/vocabulist/releases/download/v0.1.8/vocabulist-v0.1.8-x86_64-apple-darwin.tar.gz"
     sha256 "replace_macos"
   elsif OS.linux?
-    url "https://github.com/odakaui/vocabulist/releases/download/v0.1.109/vocabulist-v0.1.109-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "replace_linux"
+    url "https://github.com/odakaui/vocabulist/releases/download/v0.1.8/vocabulist-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
+    sha256 "a2dfa771fd36f8e2463ec71885683268026668c5da544b2e66b1022d17925f55"
   end
 
   depends_on "mecab" => :recommended
