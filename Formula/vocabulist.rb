@@ -8,7 +8,7 @@ class Vocabulist < Formula
     sha256 "replace_macos"
   elsif OS.linux?
     url "https://github.com/odakaui/vocabulist/releases/download/v0.1.8/vocabulist-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
-    sha256 "a2dfa771fd36f8e2463ec71885683268026668c5da544b2e66b1022d17925f55"
+    sha256 "a375dc4101588027d2d88fce5766170202422cd878b191577e7daba71b714f2f  vocabulist-v0.1.8-x86_64-unknown-linux-gnu.tar.gz"
   end
 
   depends_on "mecab" => :recommended
